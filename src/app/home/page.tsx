@@ -21,6 +21,7 @@ import { CiRepeat, CiMaximize1 } from "react-icons/ci";
 import { HiDesktopComputer } from "react-icons/hi";
 import Image from "next/image";
 
+
 export default function Home() {
     return (
         <div className="h-screen flex flex-col">
