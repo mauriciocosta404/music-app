@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 //const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Spotify app",
+  title: "Music app",
   description: "listen you favorite music",
 };
 
