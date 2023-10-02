@@ -19,6 +19,7 @@ import {
 } from "react-icons/bs";
 import { CiRepeat, CiMaximize1 } from "react-icons/ci";
 import { HiDesktopComputer,HiSearch } from "react-icons/hi";
+import {GiGuitarBassHead,GiDrumKit,GiSaxophone,GiGrandPiano} from "react-icons/gi"
 import Image from "next/image";
 
 
@@ -82,17 +83,57 @@ export default function Home() {
             </a>
           </nav>
         </aside>
-        <main className="flex-1">
-          <header className="flex">
+        <main className="flex-1 p-5">
+          <header className="flex justify-between gap-2">
 
-            <div className="flex rounded bg-zinc-700 max-w-sm p-3">
+            <div className="flex rounded bg-zinc-700 p-3 w-96">
               <input className="bg-zinc-700 flex-1 outline-none" type="text" name="" id="" placeholder="pesquisar" />
               <HiSearch size={24} />
             </div>
+
+            <div className="flex rounded bg-zinc-700 gap-2 max-w-sm p-3">
+              <span>Angola</span>
+              <img className="rounded-full" width={25} height={25} src="/angola.jpeg" alt="country" />
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span>Mauricio Costa</span>
+              <img className="rounded-full"
+                width={25}
+                height={25}
+                 src="/banner2.png" alt="" 
+            />  
+            </div>
+
           </header>
 
-          <div className="">
-            <img className="w-full h-50" src="/full.jpg" alt="" />
+          <div className="rounded mt-5 w-full h-56 bg-zinc-700">
+            <Image className="w-full h-full rounded-md"
+                width={300}
+                height={300}
+                 src="/banner2.png" alt="" 
+            />
+          </div>
+
+          <h1 className="m-3">Browse All</h1>
+
+          <div className="flex justify-between gap-2 mt-5">
+            <div className="flex rounded bg-yellow-500 p-5  gap-24">
+              <span>Jazz</span>
+              <GiGuitarBassHead size={24}/>
+            </div>
+            <div className="flex rounded bg-green-500 p-5 gap-24">
+              <span>Blues</span>
+              <GiDrumKit size={24}/>
+            </div>
+            <div className="flex rounded bg-red-500 p-5 gap-24">
+              <span>Pop</span>
+              <GiSaxophone size={24}/>
+            </div>
+            <div className="flex rounded bg-zinc-700 p-5 gap-24">
+              <span>Groove</span>
+              <GiGrandPiano size={24}/>
+            </div>
           </div>
         </main>
       </div>
