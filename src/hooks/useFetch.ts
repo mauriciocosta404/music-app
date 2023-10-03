@@ -10,6 +10,7 @@ async function getSiger(artist: string){
 
     const data = await response.json();
     console.log('data', data.data);
+    return {musicData: data.data}
 }
 
 export {getSiger};
