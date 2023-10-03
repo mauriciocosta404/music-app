@@ -21,7 +21,7 @@ import { CiRepeat, CiMaximize1 } from "react-icons/ci";
 import { HiDesktopComputer,HiSearch } from "react-icons/hi";
 import {GiGuitarBassHead,GiDrumKit,GiSaxophone,GiGrandPiano} from "react-icons/gi"
 import Image from "next/image";
-
+import MusicItem from "@/components/musicItem";
 
 export default function Home() {
     return (
@@ -91,27 +91,29 @@ export default function Home() {
               <HiSearch size={24} />
             </div>
 
-            <div className="flex rounded bg-zinc-700 gap-2 max-w-sm p-3">
-              <span>Angola</span>
-              <img className="rounded-full" width={25} height={25} src="/angola.jpeg" alt="country" />
-            </div>
+            <div className="flex gap-4">
+              <div className="flex rounded bg-zinc-700 gap-2 max-w-sm p-3">
+                <span>Angola</span>
+                <img className="rounded-full" width={25} height={25} src="/angola.jpeg" alt="country" />
+              </div>
 
-            <div className="flex items-center gap-2">
-              <span>Mauricio Costa</span>
-              <img className="rounded-full"
-                width={25}
-                height={25}
-                 src="/banner2.png" alt="" 
-            />  
+              <div className="flex items-center gap-2">
+                <span>Mauricio Costa</span>
+                <img className="rounded-full"
+                  width={25}
+                  height={25}
+                  src="/banner2.png" alt="" 
+              />  
+              </div>
             </div>
 
           </header>
 
           <div className="rounded mt-5 w-full h-56 bg-zinc-700">
             <Image className="w-full h-full rounded-md"
-                width={300}
-                height={300}
-                 src="/banner2.png" alt="" 
+                width={400}
+                height={400}
+                 src="/banner.png" alt="" 
             />
           </div>
 
@@ -135,6 +137,11 @@ export default function Home() {
               <GiGrandPiano size={24}/>
             </div>
           </div>
+
+          <ul className="mt-5">
+            <MusicItem/>
+            <MusicItem/>             
+          </ul>
         </main>
       </div>
       
