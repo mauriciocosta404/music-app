@@ -1,27 +1,17 @@
 import { FaIgloo } from "react-icons/fa";
-import {
-  AiOutlineLeft,
-  AiOutlineRight,
-  AiFillStepBackward,
-  AiFillStepForward,
-} from "react-icons/ai";
+
 import {
   BiLibrary,
   BiSearchAlt,
-  BiShuffle,
-  BiSolidMicrophoneAlt,
 } from "react-icons/bi";
 import { SiYoutubemusic } from "react-icons/si";
-import {
-  BsFillPlayFill,
-  BsMusicNoteList,
-  BsFillVolumeUpFill,
-} from "react-icons/bs";
-import { CiRepeat, CiMaximize1 } from "react-icons/ci";
-import { HiDesktopComputer,HiSearch } from "react-icons/hi";
+
+import { HiSearch } from "react-icons/hi";
 import {GiGuitarBassHead,GiDrumKit,GiSaxophone,GiGrandPiano} from "react-icons/gi"
 import Image from "next/image";
 import MusicItem from "@/components/musicItem";
+import { MusicItemMock } from "@/mock/musicItem";
+import { MusicType } from "@/types/musicItem";
 
 export default function Home() {
     return (
@@ -36,7 +26,7 @@ export default function Home() {
 
           <nav className="space-y-5 mt-10">
             <a
-              href=""
+              href="/home"
               className="flex items-center  gap-2 text-xl font-semibold"
             >
               <SiYoutubemusic size={24} className="text-green-500" /> musicas
@@ -139,8 +129,12 @@ export default function Home() {
           </div>
 
           <ul className="mt-5">
-            <MusicItem/>
-            <MusicItem/>             
+            {MusicItemMock.map((music:MusicType)=>(
+              <MusicItem 
+                musicProps={music} 
+                key={music.id}
+                />
+            ))}            
           </ul>
         </main>
       </div>
