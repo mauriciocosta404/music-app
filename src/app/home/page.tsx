@@ -12,24 +12,11 @@ import Image from "next/image";
 import MusicItem from "@/components/musicItem";
 import { MusicItemMock } from "@/mock/musicItem";
 import { MusicType } from "@/types/musicItem";
-  import { api, mainAPI } from "@/api/api";
+import { getSiger } from "@/hooks/useFetch";
 
 export default function Home() {
 
-  async function getSiger(artist: string){
-    
-       const response = await fetch(`${mainAPI}${artist}`,{
-        "method": "GET",
-          "headers": {
-            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-            "x-rapidapi-key": "0bd4b5da77msh27fe477abac7ceep19c3b8jsn91d822e0a82d"
-          } } );
-
-          const data = await response.json();
-          console.log('data', data.data);
-        }
-
-        getSiger("LANDRICK");
+    getSiger("LANDRICK");
         
     return (
         <div className="h-screen flex flex-col">
