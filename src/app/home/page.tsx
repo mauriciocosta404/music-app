@@ -7,6 +7,7 @@ import { MusicItemMock } from "@/mock/musicItem";
 import { MusicType } from "@/types/musicItem";
 import { getSiger } from "@/hooks/useFetch";
 import { Aside } from "@/components/aside";
+import { MinCard } from "@/components/minCard";
 
 export default function Home() {
 
@@ -55,22 +56,10 @@ export default function Home() {
           <h1 className="m-3">Browse All</h1>
 
           <div className="flex justify-between gap-2 mt-5">
-            <div className="flex rounded bg-yellow-500 p-5  gap-24">
-              <span>Jazz</span>
-              <GiGuitarBassHead size={24}/>
-            </div>
-            <div className="flex rounded bg-green-500 p-5 gap-24">
-              <span>Blues</span>
-              <GiDrumKit size={24}/>
-            </div>
-            <div className="flex rounded bg-red-500 p-5 gap-24">
-              <span>Pop</span>
-              <GiSaxophone size={24}/>
-            </div>
-            <div className="flex rounded bg-zinc-700 p-5 gap-24">
-              <span>Groove</span>
-              <GiGrandPiano size={24}/>
-            </div>
+            <MinCard color="bg-yellow-500" title="Jazz" icon={<GiGuitarBassHead size={24}/>}/>
+            <MinCard color="bg-green-500" title="Blues" icon={<GiDrumKit size={24}/>}/>
+            <MinCard color="bg-red-500" title="Pop" icon={<GiSaxophone size={24}/>}/>
+            <MinCard color="bg-zinc-700" title="Groove" icon={<GiGrandPiano size={24}/>}/>
           </div>
 
           <ul className="mt-5">
@@ -83,7 +72,6 @@ export default function Home() {
           </ul>
         </main>
       </div>
-      
     </div>
     )
 }
