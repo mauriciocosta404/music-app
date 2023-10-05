@@ -1,5 +1,5 @@
 import { FaIgloo } from 'react-icons/fa';
-
+import Image from 'next/image';
 import { BiLibrary, BiSearchAlt } from 'react-icons/bi';
 import { SiYoutubemusic } from 'react-icons/si';
 
@@ -57,6 +57,25 @@ export const Aside = () => {
           Banda União Murro Bento
         </a>
         <a href="text-sm text-zinc-400 hover:text-zinc-100">Geração Church</a>
+      </nav>
+      <nav className="mt-2 pt-2 border-t border-zinc-800 flex flex-col gap-3">
+        <div className='flex items-center justify-start  gap-5'>
+          <div className="rounded mt-5 w-10 h-10 bg-zinc-700">
+            <Image
+              className="w-full h-full rounded-md"
+              width={400}
+              height={400}
+              src="/banner.png"
+              alt=""
+            />
+          </div>
+
+          <div className='flex flex-col '>
+            <span className="text-zinc-300">Mauricio Costa</span>
+            <small className="text-zinc-500">legião urbana</small>
+          </div>
+
+        </div>
       </nav>
     </aside>
   );

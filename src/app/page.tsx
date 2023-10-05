@@ -1,21 +1,12 @@
-import { FaIgloo } from 'react-icons/fa';
 import {
   AiOutlineLeft,
   AiOutlineRight,
   AiFillStepBackward,
   AiFillStepForward,
 } from 'react-icons/ai';
-import {
- 
-  BiShuffle,
-  BiSolidMicrophoneAlt,
-} from 'react-icons/bi';
+import {BiShuffle,BiSolidMicrophoneAlt,} from 'react-icons/bi';
 
-import {
-  BsFillPlayFill,
-  BsMusicNoteList,
-  BsFillVolumeUpFill,
-} from 'react-icons/bs';
+import {BsFillPlayFill,BsMusicNoteList,BsFillVolumeUpFill} from 'react-icons/bs';
 import { CiRepeat, CiMaximize1 } from 'react-icons/ci';
 import { HiDesktopComputer } from 'react-icons/hi';
 import Image from 'next/image';
