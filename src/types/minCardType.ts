@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
-export interface MinCardType{
-    id?:string;
-    title:string;
-    icon:ReactNode;
-    color:string
+export interface MinCardType {
+  id?: string;
+  title: string;
+  icon: ReactNode;
+  color: string;
 }

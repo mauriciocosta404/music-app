@@ -1,12 +1,12 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import './globals.css';
+import type { Metadata } from 'next';
 //import { Inter } from 'next/font/google'
 
 //const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Music app",
-  description: "listen you favorite music",
+  title: 'Music app',
+  description: 'listen you favorite music',
 };
 
 export default function RootLayout({

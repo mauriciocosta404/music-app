@@ -1,14 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const mainAPI = 'https://deezerdevs-deezer.p.rapidapi.com/search?q=';
 
 export const api = axios.create({
-    baseURL: mainAPI,
-    headers: {
-        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-        "x-rapidapi-key": "0bd4b5da77msh27fe477abac7ceep19c3b8jsn91d822e0a82d"
-    }
-})   
+  baseURL: mainAPI,
+  headers: {
+    'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com',
+    'x-rapidapi-key': '0bd4b5da77msh27fe477abac7ceep19c3b8jsn91d822e0a82d',
+  },
+});
 
 /*const inputSearch = document.querySelector('#search');
 const playlist = document.querySelector('.playlist');

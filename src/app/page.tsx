@@ -1,33 +1,32 @@
-import { FaIgloo } from "react-icons/fa";
+import { FaIgloo } from 'react-icons/fa';
 import {
   AiOutlineLeft,
   AiOutlineRight,
   AiFillStepBackward,
   AiFillStepForward,
-} from "react-icons/ai";
+} from 'react-icons/ai';
 import {
   BiLibrary,
   BiSearchAlt,
   BiShuffle,
   BiSolidMicrophoneAlt,
-} from "react-icons/bi";
-import { SiYoutubemusic } from "react-icons/si";
+} from 'react-icons/bi';
+import { SiYoutubemusic } from 'react-icons/si';
 import {
   BsFillPlayFill,
   BsMusicNoteList,
   BsFillVolumeUpFill,
-} from "react-icons/bs";
-import { CiRepeat, CiMaximize1 } from "react-icons/ci";
-import { HiDesktopComputer } from "react-icons/hi";
-import Image from "next/image";
-import { Aside } from "@/components/aside";
+} from 'react-icons/bs';
+import { CiRepeat, CiMaximize1 } from 'react-icons/ci';
+import { HiDesktopComputer } from 'react-icons/hi';
+import Image from 'next/image';
+import { Aside } from '@/components/aside';
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        
-      <Aside/>
+        <Aside />
 
         <main className="flex-1">
           <div className=" p-6 bg-gradient-to-r from-zinc-700 to-[#33663e]">
