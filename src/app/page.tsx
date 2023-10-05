@@ -6,12 +6,11 @@ import {
   AiFillStepForward,
 } from 'react-icons/ai';
 import {
-  BiLibrary,
-  BiSearchAlt,
+ 
   BiShuffle,
   BiSolidMicrophoneAlt,
 } from 'react-icons/bi';
-import { SiYoutubemusic } from 'react-icons/si';
+
 import {
   BsFillPlayFill,
   BsMusicNoteList,
