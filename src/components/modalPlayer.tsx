@@ -4,8 +4,15 @@ import {AiFillStepBackward,AiFillStepForward} from 'react-icons/ai';
 import {BiShuffle} from 'react-icons/bi';
 import {BsFillPlayFill} from 'react-icons/bs';
 import { CiRepeat } from 'react-icons/ci';
- 
+import { useState } from "react";
+
+interface isModalOpened{
+    isModalOpened: boolean;
+    setIsModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 export const ModalPlayer = () => {
+
   return (
     <div className="fixed bg-black bg-opacity-70 w-full h-full flex justify-center items-center">
       <div className="bg-zinc-800 w-80  rounded px-4 py-10"> 
