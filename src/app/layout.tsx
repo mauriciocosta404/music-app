@@ -1,5 +1,8 @@
+
+import { MusicProvider } from '@/context/musicContext';
 import './globals.css';
 import type { Metadata } from 'next';
+import { Providers } from '@/providers/providers';
 //import { Inter } from 'next/font/google'
 
 //const inter = Inter({ subsets: ['latin'] })
@@ -16,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-zinc-900 text-zinc-50">{children}</body>
+      <Providers>
+        <body className="bg-zinc-900 text-zinc-50">{children}</body>
+      </Providers>
     </html>
+
   );
 }

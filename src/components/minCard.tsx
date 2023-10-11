@@ -1,5 +1,4 @@
 import { MinCardType } from '@/types/minCardType';
-import { ReactNode } from 'react';
 
 export const MinCard = (props: MinCardType) => {
   const myClass = `flex rounded gap-24 ${props.color} p-5`;

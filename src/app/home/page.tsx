@@ -1,3 +1,4 @@
+'use client'
 import { HiSearch } from 'react-icons/hi';
 import {
   GiGuitarBassHead,
@@ -13,10 +14,12 @@ import { getSiger } from '@/hooks/useFetch';
 import { Aside } from '@/components/aside';
 import { MinCard } from '@/components/minCard';
 import { ModalPlayer } from '@/components/modalPlayer';
+import { useMusicContext } from '@/context/musicContext';
 
 export default function Home() {
   const { musicData }: any = getSiger('LANDRICK');
-
+  const {isModalOpened} = useMusicContext(); 
+  console.log(isModalOpened);
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">

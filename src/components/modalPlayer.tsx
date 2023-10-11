@@ -4,12 +4,6 @@ import {AiFillStepBackward,AiFillStepForward} from 'react-icons/ai';
 import {BiShuffle} from 'react-icons/bi';
 import {BsFillPlayFill} from 'react-icons/bs';
 import { CiRepeat } from 'react-icons/ci';
-import { useState } from "react";
-
-interface isModalOpened{
-    isModalOpened: boolean;
-    setIsModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 export const ModalPlayer = () => {
 
