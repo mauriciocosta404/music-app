@@ -1,5 +1,3 @@
-
-import { MusicProvider } from '@/context/musicContext';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Providers } from '@/providers/providers';

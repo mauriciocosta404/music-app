@@ -18,17 +18,17 @@ import { useMusicContext } from '@/context/musicContext';
 
 export default function Home() {
   const { musicData }: any = getSiger('LANDRICK');
-  const {isModalOpened} = useMusicContext(); 
-  console.log(isModalOpened);
+  const {isModalOpened}:any = useMusicContext(); 
+  
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <ModalPlayer />
-
+        {isModalOpened ?? (<ModalPlayer />)}
+        
         <Aside />
 
         <main className="flex-1 p-5">
-          <header className="flex justify-between gap-2">
+          <header className="flex lg:flex-row flex-col items-center justify-between gap-2">
             <div className="flex rounded bg-zinc-700 p-3 w-96">
               <input
                 className="bg-zinc-700 flex-1 outline-none"
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="rounded mt-5 w-full h-56 bg-zinc-700">
+          <div className="rounded mt-5 flex-1 h-56 bg-zinc-700">
             <Image
               className="w-full h-full rounded-md"
               width={400}
@@ -77,7 +77,7 @@ export default function Home() {
 
           <h1 className="m-3">Browse All</h1>
 
-          <div className="flex justify-between gap-2 mt-5">
+          <div className="lg:flex lg:flex-row flex-col space-y-2 justify-between gap-2 mt-5">
             <MinCard
               color="bg-yellow-500"
               title="Jazz"
