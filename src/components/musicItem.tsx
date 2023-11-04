@@ -1,8 +1,8 @@
-import { MusicType } from '@/types/musicItem';
+import { musicItem } from '@/types/musicItem';
 import Image from 'next/image';
 
 type Music = {
-  musicProps: MusicType;
+  musicProps: musicItem;
 };
 
 const MusicItem: React.FC<Music> = ({ musicProps }) => {

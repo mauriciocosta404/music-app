@@ -9,12 +9,13 @@ import {
 import Image from 'next/image';
 import MusicItem from '@/components/musicItem';
 import { MusicItemMock } from '@/mock/musicItem';
-import { MusicType } from '@/types/musicItem';
+import { musicItem } from '@/types/musicItem';
 import { getSiger } from '@/hooks/useFetch';
 import { Aside } from '@/components/aside';
 import { MinCard } from '@/components/minCard';
 import { ModalPlayer } from '@/components/modalPlayer';
 import { useMusicContext } from '@/context/musicContext';
+import { ArtistSpace } from '@/components/ArtistSpace';
 
 export default function Home() {
   const { musicData }: any = getSiger('LANDRICK');
@@ -100,11 +101,9 @@ export default function Home() {
             />
           </div>
 
-          <ul className="mt-5">
-            {MusicItemMock.map((music: MusicType) => (
-              <MusicItem musicProps={music} key={music.id} />
-            ))}
-          </ul>
+          <div className="mt-5">
+            <ArtistSpace/>
+          </div>
         </main>
       </div>
     </div>

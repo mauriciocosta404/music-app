@@ -1,6 +1,11 @@
 import { mainAPI } from '@/api/api';
+import { MusicType } from '@/types/musicType';
 
-async function getSiger(artist: string) {
+type MusicResponse={
+  data:MusicType[];
+}
+
+async function getSiger(artist: string) : Promise<MusicType[]> {
   const response = await fetch(`${mainAPI}${artist}`, {
     method: 'GET',
     headers: {
@@ -9,9 +14,9 @@ async function getSiger(artist: string) {
     },
   });
 
-  const data = await response.json();
-  console.log('data', data.data);
-  return { musicData: data.data };
+  const data : MusicResponse = await response.json();
+  const musicData = data.data;
+  return musicData;
 }
 
 export { getSiger };

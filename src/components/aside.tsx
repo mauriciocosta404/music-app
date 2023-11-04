@@ -2,8 +2,23 @@ import { FaIgloo } from 'react-icons/fa';
 import { BiLibrary, BiSearchAlt } from 'react-icons/bi';
 import { SiYoutubemusic } from 'react-icons/si';
 import { AsideMusicItem } from './asideMusicItem';
+import { getSiger } from '@/hooks/useFetch';
+import { useEffect, useState } from 'react';
+import { MusicType } from '@/types/musicType';
+import { getTwoRandomElements } from '@/app/functions/getRamdomMusic';
 
 export const Aside = () => {
+  const [music,setMusic] = useState<MusicType[] | null>([]);
+  
+  useEffect(()=>{
+      const musicData  = getSiger('te amo').then((data)=>{
+        const twoElements = getTwoRandomElements(data,3);
+        setMusic(twoElements);
+      }).catch((erro)=>{
+        console.error(erro);
+      });
+  },[])
+  
   return (
     <aside className="lg:w-72 md:w-60 md:block hidden w-10 bg-zinc-950 p-6">
       <div className="flex items-center gap-2">
@@ -68,9 +83,7 @@ export const Aside = () => {
       </nav>
 
       <nav className="mt-2 pt-2 border-t border-zinc-800 flex flex-col gap-3">
-        <AsideMusicItem/>
-        <AsideMusicItem/>
-        <AsideMusicItem/>
+        {music?.map((item:MusicType)=>(<AsideMusicItem key={item.id} item={item}/>))}
       </nav>
     </aside>
   );
