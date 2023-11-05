@@ -7,9 +7,6 @@ import {
   GiGrandPiano,
 } from 'react-icons/gi';
 import Image from 'next/image';
-import MusicItem from '@/components/musicItem';
-import { MusicItemMock } from '@/mock/musicItem';
-import { musicItem } from '@/types/musicItem';
 import { getSiger } from '@/hooks/useFetch';
 import { Aside } from '@/components/aside';
 import { MinCard } from '@/components/minCard';
@@ -24,7 +21,7 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        {isModalOpened ?? (<ModalPlayer />)}
+        {isModalOpened && (<ModalPlayer />)}
         
         <Aside />
 

@@ -1,3 +1,4 @@
+'use client'
 import { FaIgloo } from 'react-icons/fa';
 import { BiLibrary, BiSearchAlt } from 'react-icons/bi';
 import { SiYoutubemusic } from 'react-icons/si';

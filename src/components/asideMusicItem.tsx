@@ -7,7 +7,7 @@ interface AsideMusicItemProps {
 
 export const AsideMusicItem = ({item}:AsideMusicItemProps) =>{
     return(
-        <div className='flex items-center  gap-5'>
+        <div className='flex items-center  gap-5 cursor-pointer'>
         <div className="rounded w-10 h-10 bg-zinc-700">
           <img
             className="w-full h-full rounded-md"
