@@ -9,8 +9,6 @@ import { useEffect, useState } from "react";
 
 export const ModalPlayer = () => {
     const { setIsModalOpened, currentMusicPlaying }: any = useMusicContext();
-
-    console.log(currentMusicPlaying);
     const [isPlaying, setIsPlaying] = useState(false);
     const [audio] = useState(new Audio(currentMusicPlaying?.preview));
 
@@ -27,8 +25,6 @@ export const ModalPlayer = () => {
         isPlaying ? audio.pause() : audio.play();   
         setIsPlaying(!isPlaying);
     };
-
-    
 
     return (
         <div className="fixed bg-black bg-opacity-70 w-full h-full flex justify-center items-center">

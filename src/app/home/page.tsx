@@ -13,11 +13,29 @@ import { MinCard } from '@/components/minCard';
 import { ModalPlayer } from '@/components/modalPlayer';
 import { useMusicContext } from '@/context/musicContext';
 import { ArtistSpace } from '@/components/ArtistSpace';
+import { useEffect, useState } from 'react';
+import MusicItem from '@/components/musicItem';
+import { MusicType } from '@/types/musicType';
 
 export default function Home() {
-  const { musicData }: any = getSiger('LANDRICK');
-  const {isModalOpened}:any = useMusicContext(); 
+  const {isModalOpened}:any = useMusicContext();
+  const [search,setSearch] = useState(""); 
+  const [musicData,setMusicData] = useState<MusicType[]>([]);
+
+  const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value); 
+  };
   
+  
+  useEffect(()=>{
+    const mucic  = getSiger(search).then((data)=>{
+      setMusicData(data);
+      console.log(musicData);
+    }).catch((erro)=>{
+      console.error(erro);
+    });
+},[search])
+
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
@@ -32,6 +50,8 @@ export default function Home() {
                 className="bg-zinc-700 flex-1 outline-none"
                 type="text"
                 name=""
+                value={search}
+                onChange={handleInputChange}
                 id=""
                 placeholder="pesquisar"
               />
@@ -56,51 +76,59 @@ export default function Home() {
                   className="rounded-full"
                   width={25}
                   height={25}
-                  src="/banner2.png"
+                  src="/banner2.png"  
                   alt=""
                 />
               </div>
             </div>
           </header>
 
-          <div className="rounded mt-5 flex-1 h-56 bg-zinc-700">
-            <Image
-              className="w-full h-full rounded-md"
-              width={400}
-              height={400}
-              src="/banner.png"
-              alt=""
-            />
-          </div>
+          {search ?
+            musicData?.map((item)=>(<MusicItem musicProps={item} />))
+          :
+          
+          <div>
+            <div className="rounded mt-5 flex-1 h-56 bg-zinc-700">
+              <Image
+                className="w-full h-full rounded-md"
+                width={400}
+                height={400}
+                src="/banner.png"
+                alt=""
+              />
+            </div>
 
-          <h1 className="m-3">Browse All</h1>
+            <h1 className="m-3">Browse All</h1>
 
-          <div className="lg:flex lg:flex-row flex-col space-y-2 justify-between gap-2 mt-5">
-            <MinCard
-              color="bg-yellow-500"
-              title="Jazz"
-              icon={<GiGuitarBassHead size={24} />}
-            />
-            <MinCard
-              color="bg-green-500"
-              title="Blues"
-              icon={<GiDrumKit size={24} />}
-            />
-            <MinCard
-              color="bg-red-500"
-              title="Pop"
-              icon={<GiSaxophone size={24} />}
-            />
-            <MinCard
-              color="bg-zinc-700"
-              title="Groove"
-              icon={<GiGrandPiano size={24} />}
-            />
-          </div>
+            <div className="lg:flex lg:flex-row flex-col space-y-2 justify-between gap-2 mt-5">
+              <MinCard
+                color="bg-yellow-500"
+                title="Jazz"
+                icon={<GiGuitarBassHead size={24} />}
+              />
+              <MinCard
+                color="bg-green-500"
+                title="Blues"
+                icon={<GiDrumKit size={24} />}
+              />
+              <MinCard
+                color="bg-red-500"
+                title="Pop"
+                icon={<GiSaxophone size={24} />}
+              />
+              <MinCard
+                color="bg-zinc-700"
+                title="Groove"
+                icon={<GiGrandPiano size={24} />}
+              />
+            </div>
 
-          <div className="mt-5">
-            <ArtistSpace/>
+            <div className="mt-5">
+              <ArtistSpace/>
+            </div>
           </div>
+          }
+
         </main>
       </div>
     </div>
