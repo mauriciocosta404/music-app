@@ -2,7 +2,7 @@ import { AsideMusicItem } from './asideMusicItem';
 import { getSiger } from '@/hooks/useFetch';
 import { useEffect, useState } from 'react';
 import { MusicType } from '@/types/musicType';
-import { getTwoRandomElements } from '@/app/functions/getRamdomMusic';
+import { getTwoRandomElements } from '@/functions/getRamdomMusic';
 import { CircleImage } from './circleImage';
 
 export const ArtistSpace = () => {

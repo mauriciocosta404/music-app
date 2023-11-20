@@ -40,7 +40,7 @@ export const ModalPlayer = () => {
                     </div>
                 </header>
 
-                <div className="flex justify-center my-5 animate-spin infinite duration-1000">
+                <div className={isPlaying ? "flex justify-center my-5 animate-spin infinite duration-1000": "flex justify-center my-5"}>
                     <div className="rounded mt-5 w-48 h-48">
                         <img
                             className="w-full h-full rounded-full shadow-xl"
