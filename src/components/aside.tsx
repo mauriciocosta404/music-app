@@ -36,7 +36,7 @@ export const Aside = () => {
           <SiYoutubemusic size={24} className="text-green-500" />
           <div className='hidden sm:block'>
             musicas
-            <span className="text-green-500">da banda</span>
+            <span className="text-green-500"> da banda</span>
           </div>
         </a>
         <a

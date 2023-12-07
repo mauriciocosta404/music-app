@@ -1,5 +1,4 @@
 import { FaTimes, FaBars } from "react-icons/fa";
-import Image from 'next/image';
 import { AiFillStepBackward, AiFillStepForward } from 'react-icons/ai';
 import { BiShuffle } from 'react-icons/bi';
 import { BsFillPlayFill, BsPlay } from 'react-icons/bs';

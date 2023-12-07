@@ -1,5 +1,4 @@
 import { MusicType } from '@/types/musicType';
-import Image from 'next/image';
 
 interface AsideMusicItemProps {
   item: MusicType; 

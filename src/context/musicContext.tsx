@@ -4,7 +4,6 @@ import { createContext, useContext, useState } from "react";
 
 const MusicContext = createContext({})
 
-
 interface isModalOpened{
     isModalOpened: boolean;
     setIsModalOpened: React.Dispatch<React.SetStateAction<boolean>>;

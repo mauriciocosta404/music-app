@@ -1,4 +1,3 @@
-import { AsideMusicItem } from './asideMusicItem';
 import { getSiger } from '@/hooks/useFetch';
 import { useEffect, useState } from 'react';
 import { MusicType } from '@/types/musicType';

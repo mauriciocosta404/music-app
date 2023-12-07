@@ -1,6 +1,6 @@
-import { MusicType } from '@/types/musicItem';
+import { musicItem } from "@/types/musicItem";
 
-export const MusicItemMock: MusicType[] = [
+export const MusicItemMock: musicItem[] = [
   {
     id: '001',
     coverImage: '/dj.jpg',
