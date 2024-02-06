@@ -26,7 +26,6 @@ export default function Home() {
     setSearch(event.target.value); 
   };
   
-  
   useEffect(()=>{
     const mucic  = getSiger(search).then((data)=>{
       setMusicData(data);
