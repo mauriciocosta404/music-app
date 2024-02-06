@@ -18,7 +18,7 @@ export const ArtistSpace = () => {
   
   return (
     <div className="w-full"> 
-      <nav className="mt-4 pt-6 border-t border-zinc-800 grid grid-flow-col auto-cols-[minmax(0,_2fr)] gap-3">
+      <nav className="mt-4 pt-6 border-t border-zinc-800 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3">
         {music?.map((item:MusicType)=>(<CircleImage key={item.id} item={item}/>))}
       </nav>
     </div>
