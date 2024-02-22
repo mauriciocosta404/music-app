@@ -44,7 +44,7 @@ export default function Home() {
 
         <main className="flex-1 p-5">
           <header className="flex lg:flex-row flex-col items-center justify-between gap-2">
-            <div className="flex rounded bg-zinc-700 p-3 w-96">
+            <div className="flex rounded bg-zinc-700 p-3 md:w-96 w-full">
               <input
                 className="bg-zinc-700 flex-1 outline-none"
                 type="text"
@@ -92,7 +92,7 @@ export default function Home() {
                 className="w-full h-full rounded-md"
                 width={400}
                 height={400}
-                src="/banner.png"
+                src="/texture-treble-clef-dark-background-isolated-generative-ai.jpg"
                 alt=""
               />
             </div>

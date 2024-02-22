@@ -73,7 +73,7 @@ export const Aside = () => {
           Banda Maravilha Angola
         </a>
         <a href="text-sm text-zinc-400 hover:text-zinc-100">
-          Groove Is The Future
+          Banda Legiao Urbana
         </a>
         <a href="text-sm text-zinc-400 hover:text-zinc-100">
           Os Irmãos Calemas
