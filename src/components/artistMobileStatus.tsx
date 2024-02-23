@@ -17,7 +17,7 @@ export const ArtistMobileStatus = () =>{
     },[])
     return(
         <div className="w-full"> 
-            <nav className="mt-4 border-b border-zinc-800 flex gap-3 justify-between">
+            <nav className="mt-4 border-b pb-4 border-zinc-800 flex gap-3 justify-between">
                 {music?.map((item:MusicType)=>(<CircleImage key={item.id} item={item}/>))}
             </nav >
         </div>
