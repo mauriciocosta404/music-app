@@ -20,6 +20,8 @@ export const ModalPlayer = () => {
         };
     }, [audio, currentMusicPlaying?.preview]);
 
+    console.log(currentMusicPlaying);
+
     const handlePlay = () => {
         isPlaying ? audio.pause() : audio.play();   
         setIsPlaying(!isPlaying);
@@ -39,7 +41,7 @@ export const ModalPlayer = () => {
                     </div>
                 </header>
 
-                <div className={isPlaying ? "flex justify-center my-5 animate-spin infinite duration-1000": "flex justify-center my-5"}>
+                <div className={ "flex justify-center my-5"}>
                     <div className="rounded mt-5 w-48 h-48">
                         <img
                             className="w-full h-full rounded-full shadow-xl"

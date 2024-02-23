@@ -16,6 +16,7 @@ import { ArtistSpace } from '@/components/ArtistSpace';
 import { useEffect, useState } from 'react';
 import MusicItem from '@/components/musicItem';
 import { MusicType } from '@/types/musicType';
+import { ArtistMobileStatus } from '@/components/artistMobileStatus';
 
 export default function Home() {
   const {isModalOpened}:any = useMusicContext();
@@ -29,7 +30,6 @@ export default function Home() {
   useEffect(()=>{
     const mucic  = getSiger(search).then((data)=>{
       setMusicData(data);
-      console.log(musicData);
     }).catch((erro)=>{
       console.error(erro);
     });
@@ -97,6 +97,12 @@ export default function Home() {
               />
             </div>
 
+            <h1 className="m-3 block md:hidden">Artists</h1>
+            
+            <div className="mt-5 md:hidden block">
+              <ArtistMobileStatus/>
+            </div>
+
             <h1 className="m-3">Browse All</h1>
 
             <div className="lg:flex lg:flex-row flex-col space-y-2 justify-between gap-2 mt-5">
@@ -122,7 +128,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="mt-5">
+            <div className="mt-5 hidden md:block">
               <ArtistSpace/>
             </div>
           </div>
