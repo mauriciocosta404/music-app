@@ -18,52 +18,115 @@ import {
         <div className="flex flex-1">
           <Aside />
   
-          <main className="flex-1">
-          
-  
-  
+          <main className="flex-1 p-10">
+            <div className="flex gap-12">
+              <div className="rounded-[2rem] w-72 h-56 bg-zinc-700">
+                <img
+                  className="w-full h-full rounded-[2rem]"
+                  width={400}
+                  height={400}
+                  src="/medium.jpg"
+                  alt="image"
+                />
+              </div>
+
+              <div className="max-w-[30rem] text-justify flex flex-col gap-7"> 
+                <h2 className="text-xl font-bold ">Hottest Hip Hop</h2>
+                <p className="text-zinc-500 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Modi, temporibus tenetur, cumque, quas voluptatum itaque
+                  Perspiciatis ullam eveniet aspernatur velit culpa maxime.</p>
+                <div className='flex gap-5'>
+                  <button className='bg-green-600 px-5 py-2 rounded-md text-sm flex'>
+                    <BsFillPlayFill size={20} className="" />
+                    Play
+                  </button>
+                  <button className='text-sm px-5 py-2 rounded-md border border-solid border-zinc-500'>Add Playlist</button>
+                </div>
+              </div>
+            </div>
+
+            
+
+<div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
+    <table className="w-full text-sm text-left rtl:text-right text-gray-400">
+        <thead className="text-xs uppercase bg-gray-800 text-gray-400">
+            <tr>
+                <th scope="col" className="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Color
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Category
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr className="border-border-gray-700">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td className="px-6 py-4">
+                    Silver
+                </td>
+                <td className="px-6 py-4">
+                    Laptop
+                </td>
+                <td className="px-6 py-4">
+                    $2999
+                </td>
+                <td className="px-6 py-4">
+                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr className=" odd:bg-gray-900  even:bg-gray-800 border-b border-gray-700">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Google Pixel Phone
+                </th>
+                <td className="px-6 py-4">
+                    Gray
+                </td>
+                <td className="px-6 py-4">
+                    Phone
+                </td>
+                <td className="px-6 py-4">
+                    $799
+                </td>
+                <td className="px-6 py-4">
+                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple Watch 5
+                </th>
+                <td className="px-6 py-4">
+                    Red
+                </td>
+                <td className="px-6 py-4">
+                    Wearables
+                </td>
+                <td className="px-6 py-4">
+                    $999
+                </td>
+                <td className="px-6 py-4">
+                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
           </main>
         </div>
-        <footer className="bg-zinc-800 border-t border-zinc-700 p-2 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image src="/dj.jpg" width={60} height={60} alt="" />
-            <div className="flex flex-col">
-              <strong className="font-normal">Groove Is The Future</strong>
-              <span className="text-xs text-zinc-400">Mauricio Costa</span>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-6">
-              <BiShuffle size={20} className="text-zinc-200" />
-              <AiFillStepBackward size={20} className="text-zinc-200" />
-              <button className="p-2 rounded-full bg-white text-black text-xl">
-                <BsFillPlayFill size={20} className="" />
-              </button>
-              <AiFillStepForward size={20} className="text-zinc-200" />
-              <CiRepeat size={20} className="text-zinc-200" />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-zinc-400">0:61</span>
-              <div className="h-1 rounded-full w-96 bg-zinc-600">
-                <div className="bg-zinc-200 w-40 h-1 rounded"></div>
-              </div>
-              <span className="text-xs text-zinc-400">0:61</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <BiSolidMicrophoneAlt size={24} className="text-zinc-200" />
-            <BsMusicNoteList size={24} className="text-zinc-200" />
-            <HiDesktopComputer size={24} className="text-zinc-200" />
-            <div className="flex items-center gap-2">
-              <BsFillVolumeUpFill size={24} className="text-zinc-200" />
-              <div className="h-1 rounded-full w-24 bg-zinc-600">
-                <div className="bg-zinc-200 w-10 h-1 rounded"></div>
-              </div>
-            </div>
-            <CiMaximize1 size={24} className="text-zinc-200" />
-          </div>
-        </footer>
-      </div>
+       </div>
     );
   }
   
